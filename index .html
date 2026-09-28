@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Bridge | Connect. Grow. Succeed.</title>
+<meta name="description" content="Career Bridge connects ambitious people with career opportunities, mentorship, events and a supportive professional community.">
+<style>
+:root{
+  --navy:#0b1f3a; --blue:#1769ff; --sky:#eaf2ff; --text:#172033;
+  --muted:#64748b; --white:#fff; --line:#e6ebf2; --green:#19a974;
+  --shadow:0 18px 50px rgba(18,42,78,.10); --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(230,235,242,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--navy)}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),#6d9cff);color:white;display:grid;place-items:center;font-weight:900}
+nav{display:flex;align-items:center;gap:28px;color:#475569;font-size:14px;font-weight:600}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:750;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(23,105,255,.22)}
+.btn-primary:hover{transform:translateY(-2px);background:#0e59df}
+.btn-outline{border-color:#d8e1ef;color:var(--navy);background:white}
+.menu{display:none;border:0;background:none;font-size:25px}
+.hero{padding:90px 0 75px;background:radial-gradient(circle at 85% 15%,#dce9ff 0,transparent 31%),linear-gradient(180deg,#f7faff,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#e8f1ff;color:#1459d9;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:800;margin-bottom:20px}
+.badge span{width:7px;height:7px;background:#2b7cff;border-radius:50%}
+h1{font-size:clamp(43px,5.5vw,70px);line-height:1.02;letter-spacing:-2.8px;color:var(--navy);margin-bottom:23px}
+h1 em{font-style:normal;color:var(--blue)}
+.hero p{font-size:18px;color:var(--muted);max-width:590px;margin-bottom:30px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-card{background:white;border:1px solid #e8eef7;border-radius:26px;padding:25px;box-shadow:var(--shadow);position:relative}
+.window{border-radius:18px;background:#f5f8fd;border:1px solid #e7edf6;overflow:hidden}
+.window-top{height:42px;background:#fff;border-bottom:1px solid #e7edf6;display:flex;align-items:center;gap:6px;padding:0 15px}
+.dot{width:8px;height:8px;border-radius:50%;background:#d3dce9}
+.mock-content{padding:25px}
+.mock-title{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.mock-sub{font-size:12px;color:var(--muted);margin-bottom:20px}
+.job{background:#fff;border:1px solid #e5ebf4;border-radius:15px;padding:15px;margin-bottom:10px;display:flex;gap:13px;align-items:center}
+.icon{width:40px;height:40px;border-radius:12px;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;font-weight:900}
+.job strong{font-size:13px}.job small{display:block;color:#8491a4;font-size:11px}
+.section{padding:85px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 45px}
+.eyebrow{color:var(--blue);font-size:13px;font-weight:850;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:8px}
+h2{font-size:38px;line-height:1.12;color:var(--navy);letter-spacing:-1px;margin-bottom:12px}
+.section-head p,.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:27px;background:white;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card-icon{width:48px;height:48px;border-radius:14px;background:#edf4ff;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:18px}
+.card h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.jobs{background:#f7faff}
+.job-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.job-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:21px;display:flex;justify-content:space-between;gap:20px}
+.job-card .left{display:flex;gap:14px}
+.job-card h3{font-size:16px;color:var(--navy)}
+.tag{display:inline-block;background:#eef5ff;color:#2b68d9;font-size:11px;font-weight:800;border-radius:7px;padding:4px 8px;margin-top:7px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{position:relative;text-align:center}
+.step-number{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:850;margin:0 auto 17px}
+.step h3{font-size:16px;margin-bottom:6px}.step p{font-size:13px;color:var(--muted)}
+.step:not(:last-child):after{content:"";position:absolute;top:26px;left:65%;width:70%;border-top:1px dashed #cdd7e6}
+.mentorship{background:var(--navy);color:#fff;border-radius:30px;padding:55px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.mentorship h2{color:#fff}.mentorship p{color:#c5d1e2;margin-bottom:24px}
+.mentor-box{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:23px}
+.mentor-box div{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px}
+.mentor-box div:last-child{border:0}
+.cta{margin-top:0;padding:75px 0}
+.cta-box{background:linear-gradient(135deg,#1769ff,#0c3fa8);border-radius:28px;padding:55px;text-align:center;color:#fff}
+.cta-box h2{color:#fff}.cta-box p{color:#dbe7ff;max-width:620px;margin:0 auto 25px}
+footer{background:#08172c;color:#aab9ce;padding:48px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;padding-bottom:35px}
+footer h3,footer strong{color:#fff}footer p,footer a{font-size:13px}footer a{display:block;margin-top:9px}footer a:hover{color:#fff}
+.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){
+ nav{display:none}.menu{display:block}.nav>.btn{display:none}
+ .hero-grid,.mentorship{grid-template-columns:1fr}.hero{padding-top:60px}
+ .cards,.job-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}
+ .step:not(:last-child):after{display:none}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ h1{letter-spacing:-1.8px}.hero-actions .btn{width:100%}
+ .steps{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}
+ .mentorship,.cta-box{padding:30px}.copyright{flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#"><span class="logo-mark">CB</span> Career Bridge</a>
+    <nav>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#articles">Articles</a>
+      <a href="#events">Events</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#how">How It Works</a>
+    </nav>
+    <a class="btn btn-primary" href="#apply">Apply Now</a>
+    <button class="menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><span></span> Your next opportunity starts here</div>
+      <h1>Build your career.<br><em>Bridge your future.</em></h1>
+      <p>Career Bridge connects ambitious people with meaningful opportunities, career insights, mentorship and a community designed to help you move forward.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#apply">Join Career Bridge →</a>
+        <a class="btn btn-outline" href="#opportunities">Explore Opportunities</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="window">
+        <div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="mock-content">
+          <div class="mock-title">Latest opportunities</div>
+          <div class="mock-sub">Discover roles and programs selected for our community.</div>
+          <div class="job"><div class="icon">💼</div><div><strong>Graduate Trainee Program</strong><small>Full-time · Lagos · Applications open</small></div></div>
+          <div class="job"><div class="icon">🚀</div><div><strong>Product Intern</strong><small>Internship · Hybrid · Applications open</small></div></div>
+          <div class="job"><div class="icon">🎓</div><div><strong>Career Growth Workshop</strong><small>Event · Online · This Saturday</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="opportunities">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">What we offer</div><h2>Everything you need to move forward</h2><p>From discovering opportunities to meeting mentors, Career Bridge brings useful career resources into one community.</p></div>
+    <div class="cards">
+      <div class="card"><div class="card-icon">💼</div><h3>Career Opportunities</h3><p>Find jobs, internships, graduate roles and other opportunities that can help you take your next step.</p></div>
+      <div class="card"><div class="card-icon">📰</div><h3>Articles & Updates</h3><p>Practical career advice, industry news, CV tips, interview guidance and professional development insights.</p></div>
+      <div class="card"><div class="card-icon">📅</div><h3>Career Events</h3><p>Stay informed about workshops, networking sessions, webinars and events built for career growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section jobs" id="articles">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Featured</div><h2>Opportunities worth exploring</h2><p>Replace these sample listings with your team's real opportunities, articles and career updates.</p></div>
+    <div class="job-grid">
+      <div class="job-card"><div class="left"><div class="icon">💻</div><div><h3>Junior Software Developer</h3><small class="muted">Technology · Lagos / Hybrid</small><br><span class="tag">Full-time</span></div></div><a class="btn btn-outline" href="#apply">View</a></div>
+      <div class="job-card"><div class="left"><div class="icon">📊</div><div><h3>Business Analyst Intern</h3><small class="muted">Business · Remote</small><br><span class="tag">Internship</span></div></div><a class="btn btn-outline" href="#apply">View</a></div>
+      <div class="job-card"><div class="left"><div class="icon">🎨</div><div><h3>UI/UX Design Opportunity</h3><small class="muted">Design · Hybrid</small><br><span class="tag">Entry level</span></div></div><a class="btn btn-outline" href="#apply">View</a></div>
+      <div class="job-card"><div class="left"><div class="icon">📣</div><div><h3>Digital Marketing Role</h3><small class="muted">Marketing · Lagos</small><br><span class="tag">Career opportunity</span></div></div><a class="btn btn-outline" href="#apply">View</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="events">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Simple process</div><h2>How Career Bridge works</h2><p>We keep community access intentional so approved members can get the most from the platform.</p></div>
+    <div class="steps" id="how">
+      <div class="step"><div class="step-number">01</div><h3>Apply</h3><p>Complete the Career Bridge application form.</p></div>
+      <div class="step"><div class="step-number">02</div><h3>We Review</h3><p>Our team reviews your submission.</p></div>
+      <div class="step"><div class="step-number">03</div><h3>Get Approved</h3><p>Approved applicants receive an acceptance email.</p></div>
+      <div class="step"><div class="step-number">04</div><h3>Join Community</h3><p>Use your invitation to access our WhatsApp community.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mentorship">
+  <div class="container">
+    <div class="mentorship">
+      <div><div class="eyebrow" style="color:#8eb7ff">Mentorship</div><h2>Learn from people who have walked the path.</h2><p>Connect with mentors, ask career questions and gain practical perspectives that can help you make informed career decisions.</p><a class="btn btn-primary" href="#apply" style="background:#fff;color:#1769ff">Request Mentorship</a></div>
+      <div class="mentor-box"><div>👤 Career guidance</div><div>🎯 Goal setting</div><div>📄 CV & interview support</div><div>🤝 Professional networking</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="apply">
+  <div class="container">
+    <div class="cta-box">
+      <div class="eyebrow" style="color:#b9d2ff">Career Bridge Community</div>
+      <h2>Ready to take the next step?</h2>
+      <p>Apply to join Career Bridge. Your application will be reviewed by our team, and approved applicants will receive an email with access to our WhatsApp community.</p>
+      <!-- Replace # below with the real application form URL -->
+      <a class="btn btn-outline" href="#" onclick="alert('Replace this button with your real application form link.');return false;">Apply to Join the Community →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="logo" href="#" style="color:#fff"><span class="logo-mark">CB</span> Career Bridge</a><p style="margin-top:14px;max-width:280px">Connecting people to opportunities, mentorship and a community built for career growth.</p></div>
+      <div><strong>Explore</strong><a href="#opportunities">Opportunities</a><a href="#articles">Articles</a><a href="#events">Events</a></div>
+      <div><strong>Community</strong><a href="#mentorship">Mentorship</a><a href="#apply">Apply</a><a href="#">WhatsApp Community</a></div>
+      <div><strong>Team</strong><p style="margin-top:9px">Career Bridge</p><p>Built as a capstone project.</p></div>
+    </div>
+    <div class="copyright"><span>© 2026 Career Bridge. All rights reserved.</span><span>Connect · Grow · Succeed</span></div>
+  </div>
+</footer>
+</body>
+</html>
